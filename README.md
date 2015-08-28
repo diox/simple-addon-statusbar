@@ -7,7 +7,7 @@ to your statusbar. Nothing else.
 Installing
 ==========
 
-* Run `zip -r * /tmp/simple-addon-statusbar-0.1.zip` from this directory.
+* Run `zip -r /tmp/simple-addon-statusbar-0.1.zip *` from this directory.
 * Copy `update.webapp` and `/tmp/simple-addon-statusbar-0.1.zip` to your
   webserver
 * Debug the system app in WebIDE and run `navigator.mozApps.installPackage('http://<path>/simple-addon-statusbar.webapp')`,
