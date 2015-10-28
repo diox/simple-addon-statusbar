@@ -8,5 +8,5 @@ Installing
 ==========
 
 * Run `zip -r /tmp/simple-addon-statusbar.zip *` from this directory.
-* Upload `/tmp/simple-addon-statusbar-0.1.zip` to Marketplace, get it reviewed.
+* Upload `/tmp/simple-addon-statusbar.zip` to Marketplace, get it reviewed.
 * Done!
