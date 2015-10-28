@@ -18,7 +18,7 @@
         container.id = 'statusbar-m';
         container.style.fontSize = '1.5rem';
         container.style.fontWeight = 'bold';
-        container.style.color = 'yellow';
+        container.style.color = '#fcee07';
         container.textContent = 'M';
 
         // If it's not already there, append the element to the status bar.
