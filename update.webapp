@@ -1,9 +1,0 @@
-{
-  "name": "'M' in Status Bar",
-  "description": "Adds a 'M' to the status bar",
-  "developer": {
-    "name": "Mathieu Pillard"
-  },
-  "package_path": "simple-addon-statusbar-0.1.zip",
-  "version": "0.1"
-}
