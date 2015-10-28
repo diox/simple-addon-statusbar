@@ -22,8 +22,8 @@
         container.textContent = 'M';
 
         // If it's not already there, append the element to the status bar.
-        var statusBar = document.getElementById('statusbar-maximized');
-        if (!statusBar.contains(container)) {
+        var statusBar = document.querySelector('.statusbar');
+        if (statusBar && !statusBar.contains(container)) {
             statusBar.appendChild(container);
         }
     }
