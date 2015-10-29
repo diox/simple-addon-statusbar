@@ -13,13 +13,13 @@
     }
 
     function initialize() {
-        // Build the 'M' element
+        // Build the '{letter}' element
         var container = document.createElement('div');
-        container.id = 'statusbar-m';
+        container.id = 'statusbar-{letter}'.toLowerCase();
         container.style.fontSize = '1.5rem';
         container.style.fontWeight = 'bold';
-        container.style.color = '#fcee07';
-        container.textContent = 'M';
+        container.style.color = '{color}';
+        container.textContent = '{letter}';
 
         // If it's not already there, append the element to the status bar.
         var statusBar = document.querySelector('.statusbar');
