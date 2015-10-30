@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import json
 import os
 import os.path
 from cStringIO import StringIO
@@ -41,17 +40,16 @@ if not os.path.exists('dist'):
     os.mkdir('dist')
 
 with open('manifest.json') as f:
-    manifest = f.read()
+    manifest_template = f.read()
 with open('addon.js') as f:
-    addon = f.read()
+    addon_template = f.read()
 with Image.open('icon.png') as icon:
     for letter, color in letters.items():
-        version = json.loads(manifest).get('version', '0.1')
+        addon = addon_template.replace(
+            '{color}', color).replace('{letter}', letter)
+        manifest = manifest_template.replace('{letter}', letter)
 
-        addon = addon.replace('{color}', color).replace('{letter}', letter)
-        manifest = manifest.replace('{letter}', letter)
-
-        filename = 'dist/%s-in-status-bar-%s.zip' % (letter.lower(), version)
+        filename = 'dist/%s-in-status-bar.zip' % letter.lower()
         zip_file = ZipFile(filename, mode='w')
         zip_file.writestr('manifest.json', manifest)
         zip_file.writestr('addon.js', addon)
